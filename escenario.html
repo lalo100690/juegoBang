@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Vaqueros</title>
+    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="estilo.css" type="text/css">
+    <script src="funciones.js"></script>
+</head>
+    
+<body style="background:#ecc35e">
+<div id="bg">
+    <h2>Casi todo listo...</h2>
+    <input type="text" placeholder="FBiD Jugador 1" id="fbid1">
+    <input type="text" placeholder="FBiD Jugador 2" id="fbid2">
+    <button onclick="comenzar()">Comenzar Duelo</button>
+</div>
+
+<div id="escenario">
+    <div id="p1" onclick="disparo('p1')">
+        <div class="barra">
+            <img src="logo.png" id="img-fbid1">
+            <p>Lalo Aguirre</p>
+            <div id="resultados-p1"></div>
+        </div>
+        <img src="v2.png" id="vaquero-p1">
+    </div>
+    
+    <div id="p2"  onclick="disparo('p2')">
+        <div class="barra">
+            <img src="logo.png" id="img-fbid2">
+            <p>Lalo Aguirre</p>
+            <div id="resultados-p2"></div>
+        </div> 
+        <img src="v2.png" id="vaquero-p2">
+    </div>
+</div>
+    
+<div id="mensaje" onclick="reestablecer()">Listo</div>
+    
+<div id="game-over" onclick="volverAJugar()">GAME OVER</div>
+    
+<div id="conteo"></div>
+    
+<script>
+    window.addEventListener('load', animacion, true);
+</script>
+    
+<audio id="audio">
+    <source src="bang.mp3" type="audio/mp3">
+</audio>
+    
+<audio autoplay>
+    <source src="cancion.mp4" type="audio/mp4">
+</audio>
+
+<audio id="grito">
+    <source src="grito.mp4" type="audio/mp4">
+</audio>
+
+</body>
+</html>
